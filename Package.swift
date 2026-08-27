@@ -24,26 +24,26 @@ let package = Package(
     .library(name: "GoogleCloudRetailV2", targets: ["GoogleCloudRetailV2"])
   ],
   dependencies: [
-    .package(path: "../../generated/google-api"),
+    .package(path: "../../generated/swift-google-api"),
     .package(path: "../../packages/auth"),
     .package(path: "../../packages/gax"),
     .package(path: "../../packages/wkt"),
-    .package(path: "../../generated/google-longrunning"),
-    .package(path: "../../generated/google-rpc"),
-    .package(path: "../../generated/google-type"),
+    .package(path: "../../generated/swift-google-longrunning"),
+    .package(path: "../../generated/swift-google-rpc"),
+    .package(path: "../../generated/swift-google-type"),
     .package(url: "https://github.com/apple/swift-log", from: "1.12.0"),
   ],
   targets: [
     .target(
       name: "GoogleCloudRetailV2",
       dependencies: [
-        .product(name: "GoogleApi", package: "google-api"),
+        .product(name: "GoogleApi", package: "swift-google-api"),
         .product(name: "GoogleCloudAuth", package: "auth"),
         .product(name: "GoogleCloudGax", package: "gax"),
         .product(name: "GoogleCloudWKT", package: "wkt"),
-        .product(name: "GoogleLongRunning", package: "google-longrunning"),
-        .product(name: "GoogleRpc", package: "google-rpc"),
-        .product(name: "GoogleType", package: "google-type"),
+        .product(name: "GoogleLongRunning", package: "swift-google-longrunning"),
+        .product(name: "GoogleRpc", package: "swift-google-rpc"),
+        .product(name: "GoogleType", package: "swift-google-type"),
         .product(name: "Logging", package: "swift-log"),
       ],
     )
